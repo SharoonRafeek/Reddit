@@ -1,27 +1,5 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-html {
-  font-family: "Montserrat", sans-serif;
-}
-body {
-  background: #eee;
-  padding: 0 16px;
-}
-
-header {
-  background-color: #FF7878;
-  margin: auto -16px;
-  padding: 16px 32px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-}
-
-header h1 {
-  color: #fff;
-  font-family: "McLaren", cursive;
-  font-weight: 200;
+  font-family: 'Dosis', sans-serif;
 }
 
 footer {
@@ -32,6 +10,28 @@ footer {
   height: 2.5rem;
 }
 
+.navbar-brand {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Londrina Solid', cursive;
+}
+
+
 footer p {
   color: #ccc;
+}
+
+.login-input {
+  width: 250px;
+}
+
+input[type="email"] {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 0;
 }

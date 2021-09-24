@@ -2,9 +2,13 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header>
-      <h1>Reddit</h1>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+      <div class="container-fluid">
+        <a class="navbar-brand " href>
+          ReddiT
+        </a>
+      </div>
+    </nav>
   );
 };
 
