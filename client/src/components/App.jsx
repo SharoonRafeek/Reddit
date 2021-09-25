@@ -4,13 +4,15 @@ import Header from "./Header";
 import Login from "./Login/Login";
 
 const App = () => {
-
   
+  const addDetails = (details) => {
+    console.log(details);
+  }
 
   return (
     <div>
       <Header />
-      <Login />
+      <Login onAdd={addDetails}/>
       <Footer />
     </div>
   );

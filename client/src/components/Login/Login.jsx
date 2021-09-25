@@ -1,20 +1,67 @@
-import React from "react";
-import Input from "./Input";
+import React, { useState } from "react";
 
 
-const Login = () => {
+const Login = (props) => {
 
-  function addItem(details) {
-    console.log(details);
+  const [details, setDetails] = useState({
+    email: "",
+    password: "",
+  });
+
+  function handleChange(event) {
+    const newName = event.target.name;
+    const newValue = event.target.value;
+    setDetails((prevValue) => {
+      return { ...prevValue, [newName]: newValue };
+    });
   }
 
   return (
     <div className="text-center mt-5 login-form">
       <form style={{ "max-width": "300px", margin: "auto" }}>
         <h1 className="h3 mb-3 font-weight-norma mt-3">Sign In</h1>
-        <Input onAdd={addItem}/>
+        <input
+          onChange={handleChange}
+          type="email"
+          name="email"
+          className="form-control"
+          placeHolder="Enter your email."
+          value={details.email}
+          onAdd={details.email}
+          required
+          autoFocus
+        />
+        <input
+          onChange={handleChange}
+          type="password"
+          name="password"
+          className="form-control"
+          placeHolder="Enter your Password"
+          value={details.password}
+          onAdd={details.password}
+          required
+          autoFocus
+        />
+        <label>
+          <input type="checkbox" value="Remember Me" />
+          Remember Me
+        </label>
+        <div className="mt-3 d-grid gap-2">
+          <button
+            onClick={(event) => {
+              props.onAdd(details);
+              event.preventDefault();
+            }}
+            type="submit"
+            className="btn btn-lg btn-primary"
+          >
+            Sign In
+          </button>
+        </div>
       </form>
-      <h6 className="mt-3">Not signed up? <a href="/index">Sign up</a></h6>
+      <h6 className="mt-3">
+        Not signed up? <a href="/index">Sign up</a>
+      </h6>
     </div>
   );
 };
