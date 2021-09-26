@@ -18,16 +18,15 @@ const Login = (props) => {
 
   return (
     <div className="text-center mt-5 login-form">
-      <form style={{ "max-width": "300px", margin: "auto" }}>
+      <form style={{ maxWidth: "300px", margin: "auto" }}>
         <h1 className="h3 mb-3 font-weight-norma mt-3">Sign In</h1>
         <input
           onChange={handleChange}
           type="email"
           name="email"
           className="form-control"
-          placeHolder="Enter your email."
+          placeholder="Enter your email."
           value={details.email}
-          onAdd={details.email}
           required
           autoFocus
         />
@@ -36,9 +35,8 @@ const Login = (props) => {
           type="password"
           name="password"
           className="form-control"
-          placeHolder="Enter your Password"
+          placeholder="Enter your Password"
           value={details.password}
-          onAdd={details.password}
           required
           autoFocus
         />
