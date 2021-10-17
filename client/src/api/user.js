@@ -1,5 +1,4 @@
-import axios from "axios";
+import React from "react";
+import { useState, useEffect } from "react";
 
-export default axios.create({
-  baseURL: "http://localhost:5000",
-});
+const getUser = () => {};

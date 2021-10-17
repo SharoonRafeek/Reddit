@@ -2,20 +2,17 @@ import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Login from "./Login/Login";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
-
+  const onClick = (details) => {
+    console.log(details);
+  };
   return (
-    <Router>
-      <div>
-        <Header />
-        <Switch>
-          <Route path="/login" exact component={Login}/>
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
+    <div>
+      <Header />
+      <Login onAdd={onClick} />
+      <Footer />
+    </div>
   );
 };
 
